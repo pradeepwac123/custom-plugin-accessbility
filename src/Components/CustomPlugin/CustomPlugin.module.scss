@@ -1,0 +1,12 @@
+
+
+.customplugin_section{
+    :global{
+        .progress-bar{
+
+            &::before{
+                width: var(--progress-barwidth);
+            }
+        }
+    }
+}

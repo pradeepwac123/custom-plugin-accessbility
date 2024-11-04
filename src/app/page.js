@@ -1,95 +1,46 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import "./common.scss";
+import CustomPlugin from "@/Components/CustomPlugin";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={`${styles.page} `}>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <CustomPlugin />
+      <div className="main">
+        <header className="bg-white text-black px-5 py-5 text-[1.5625rem] dark:bg-black dark:text-white shadow-[0_1px_2px_0px_rgba(211,211,211,1)] fixed w-full">
+          Header
+        </header>
+        <main className="pt-[81px] ">
+
+
+
+          <section className="bg-white text-black dark:text-white dark:bg-black">
+            <div className="container mx-auto">
+              <div className="grid grid-cols-12">
+                <div className="col-span-6"></div>
+                <div className="col-span-6">
+                  <h1>heading 1</h1>
+                  <h2>heading 2</h2>
+                  <h3>heading 3</h3>
+                  <h4>heading 4</h4>
+                  <h5>heading 5</h5>
+                  <h6>heading 6</h6>
+                  <p className="text-yellow-300">Paragraph</p>
+                  <span className="text-green-500">span elements</span>
+
+                  <a>home</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer className="bg-white text-black dark:text-white dark:bg-black px-5 py-5 text-[1.5625rem]">
+          Footer
+        </footer>
+      </div>
     </div>
   );
 }
